@@ -1,0 +1,28 @@
+name: "Qodana - License Audit"
+description: "License Audit helps to avoid problems with incompatible third-party licenses in software projects"
+author: "JetBrains"
+branding:
+  icon: "file-text"
+  color: "green"
+inputs:
+  project-dir:
+    description: "Project folder to scan"
+    required: false
+    default: "${{ github.workspace }}"
+  results-dir:
+    description: "Save results to folder"
+    required: false
+    default: "${{ github.workspace }}/qodana"
+  options:
+    description: "Image environment variables"
+    required: false
+    default: ""
+runs:
+  using: "composite"
+  steps:
+    - run: mkdir -p "${{inputs.results-dir}}"
+      shell: bash
+    - run: echo ${{inputs.options}} | tr " " "\n" > OPTIONS
+      shell: bash
+    - run: docker run -e CI=1 --env-file OPTIONS -v ${{inputs.project-dir}}:/data/project -v ${{inputs.results-dir}}:/data/results jetbrains/qodana-license-audit:2021.1-eap --save-report
+      shell: bash
