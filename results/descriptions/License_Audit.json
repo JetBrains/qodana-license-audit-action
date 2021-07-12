@@ -1,0 +1,46 @@
+{
+  "profile": "Project Default",
+  "groups": [
+    {
+      "name": "License Compliance",
+      "inspections": [
+        {
+          "shortName": "UnrecognizedProjectLicense",
+          "displayName": "Unrecognized project license",
+          "enabled": true,
+          "description": "A project license cannot be recognized"
+        },
+        {
+          "shortName": "UnrecognizedDependencyLicense",
+          "displayName": "Unrecognized dependency license",
+          "enabled": true,
+          "description": "A dependency license cannot be recognized"
+        },
+        {
+          "shortName": "NoProjectLicenses",
+          "displayName": "No project licenses",
+          "enabled": true,
+          "description": "Project licenses cannot be found"
+        },
+        {
+          "shortName": "NoDependencyLicenses",
+          "displayName": "No dependency licenses",
+          "enabled": true,
+          "description": "Dependency licenses cannot be found"
+        },
+        {
+          "shortName": "ProhibitedDependencyLicense",
+          "displayName": "Prohibited dependency license",
+          "enabled": true,
+          "description": "A dependency license is in the prohibited license list"
+        },
+        {
+          "shortName": "UncategorizedDependencyLicense",
+          "displayName": "Uncategorized dependency license",
+          "enabled": true,
+          "description": "A dependency license is not in the allowed or the prohibited licenses lists"
+        }
+      ]
+    }
+  ]
+}

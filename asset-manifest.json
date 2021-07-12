@@ -1,0 +1,13 @@
+{
+  "files": {
+    "QD-vendors.css": "./versions/VERSION_ID/css/QD-vendors.css",
+    "QD-vendors.js": "./versions/VERSION_ID/js/QD-vendors.js",
+    "main.css": "./versions/VERSION_ID/css/QD-main.css",
+    "main.js": "./versions/VERSION_ID/js/QD-main.js",
+    "index.html": "./index.html",
+    "preview.html": "./preview.html",
+    "versions/VERSION_ID/js/QD-vendors.js.LICENSE.txt": "./versions/VERSION_ID/js/QD-vendors.js.LICENSE.txt",
+    "versions/VERSION_ID/media/style.css": "./versions/VERSION_ID/media/JetBrainsMono-Regular.woff",
+    "versions/VERSION_ID/media/Line.module.css": "./versions/VERSION_ID/media/line.svg"
+  }
+}
