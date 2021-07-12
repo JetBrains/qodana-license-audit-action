@@ -5,8 +5,8 @@ jobs:
   qodana:
     runs-on: ubuntu-latest
     steps:
-      #      # clone your project
-      #      - uses: actions/checkout@v2
+      # clone your project
+      # - uses: actions/checkout@v2
       # or clone any other project
       - uses: actions/checkout@v2
         with:
@@ -19,3 +19,13 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           path: ${{ github.workspace }}/qodana
+      - uses: actions/download-artifact@v2
+        with:
+          name: 'artifact'
+          path: qodana
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./qodana/report
+          destination_dir: ./
